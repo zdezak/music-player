@@ -32,7 +32,7 @@ import com.algomatrix.musicplayer.ui.theme.Teal200
 @Composable
 fun SearchBarCard(
     modifier: Modifier = Modifier,
-    router: Router? = null
+    router: Router
 ){
     Box(
         modifier = Modifier
@@ -44,7 +44,7 @@ fun SearchBarCard(
             )
             .clickable {
                 Log.d("search card", "navigate to some other page")
-                router?.openSearchPage()
+                router.openSearchPage()
             },
 
         contentAlignment = Alignment.Center

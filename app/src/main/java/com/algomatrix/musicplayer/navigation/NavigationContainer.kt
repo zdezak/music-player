@@ -39,7 +39,7 @@ fun NavigationContainer(
              Bottom Navigation Bar
         */
         composable(Page.Home.route){
-            HomePage()
+            HomePage(router = router)
         }
         composable(Page.Favorite.route){
             FavoritePage()

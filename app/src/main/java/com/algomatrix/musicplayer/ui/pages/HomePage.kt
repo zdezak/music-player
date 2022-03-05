@@ -37,7 +37,7 @@ import com.algomatrix.musicplayer.ui.theme.Teal200
 
 
 @Composable
-fun TopBar(){
+fun TopBar(router: Router){
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -45,7 +45,7 @@ fun TopBar(){
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ){
-        SearchBarCard()
+        SearchBarCard(router = router)
         ProfileCard()
     }
 }
@@ -130,9 +130,9 @@ fun ForYouContainer(){
 }
 
 @Composable
-fun HomePage(){
+fun HomePage(router: Router){
     Scaffold(
-        topBar = { TopBar()}
+        topBar = { TopBar(router)}
 
     ) {
         Column (
@@ -148,5 +148,5 @@ fun HomePage(){
 @Preview
 @Composable
 fun HomePagePreview(){
-    HomePage()
+    //HomePage()
 }
